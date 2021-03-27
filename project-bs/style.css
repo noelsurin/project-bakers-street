@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300&family=Raleway:wght@300&display=swap");
+/*      SASS TEMPLATE       */
+/*global classes*/
+button, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/*  typography classes */
+.font-rale {
+  font-family: "Raleway", Cursive;
+}
+
+.font-fred {
+  font-family: "Fredoka One", Cursive;
+}
+
+.font-quick {
+  font-family: "Quicksand", Cursive;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 12px;
+}
+
+.font-ioze-16 {
+  font-size: 12px;
+}
+
+.font-size-20 {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
