@@ -76,4 +76,39 @@ button, button:focus {
   background: #FFBFCE;
 }
 
+/*  Category-Template   */
+#category .owl-carousel .item .product a {
+  overflow: hidden;
+}
+#category .owl-carousel .item .product img {
+  transition: transform 0.5s ease;
+}
+#category .owl-carousel .item .product img:hover {
+  transform: scale(1.1);
+}
+#category .owl-carousel .owl-nav button {
+  position: absolute;
+  top: 30%;
+  outline: none;
+}
+#category .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+#category .owl-carousel .owl-nav button.owl-prev span,
+#category .owl-carousel .owl-nav button.owl-next span {
+  font-size: 35px;
+  color: #B3856B;
+  padding: 0 1rem;
+}
+#category .owl-carousel .owl-nav button.owl-prev span {
+  margin-left: -4rem;
+  margin-top: auto;
+}
+#category .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+#category .owl-carousel .owl-nav button.owl-next span {
+  margin-right: -4rem;
+}
+
 /*# sourceMappingURL=style.css.map */
