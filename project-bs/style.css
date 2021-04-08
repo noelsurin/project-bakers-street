@@ -47,6 +47,14 @@ button, button:focus {
   font-size: 150px;
 }
 
+.font-size-75 {
+  font-size: 75px;
+}
+
+.font-size-30 {
+  font-size: 30px;
+}
+
 /*      Color Template      */
 .color-primary {
   color: #B3856B;
@@ -109,6 +117,12 @@ button, button:focus {
 }
 #category .owl-carousel .owl-nav button.owl-next span {
   margin-right: -4rem;
+}
+
+/*   Bestseller section template  */
+#bestseller .grid.grid-item {
+  margin-right: 1.2rem;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
