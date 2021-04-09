@@ -1,0 +1,1 @@
+<img src="./assets/pattern-bg.png" class="w-100 h-auto ">
