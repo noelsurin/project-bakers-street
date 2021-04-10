@@ -12,21 +12,7 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
 -- Database: `baker-st`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cart`
---
 
 CREATE TABLE `cart` (
   `cart_id` int(11) NOT NULL,
@@ -34,19 +20,6 @@ CREATE TABLE `cart` (
   `item_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `category`
---
-
---
--- Dumping data for table `category`
---
-
---
--- Table structure for table `product`
---
 
 CREATE TABLE `product` (
   `item_id` int(11) NOT NULL,
@@ -57,9 +30,6 @@ CREATE TABLE `product` (
   `item_register` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `product`
---
 
 INSERT INTO `product` (`item_id`, `item_category`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
 (1, 'cake', 'Red Velvet', 449.00, './assets/Inventory/Cakes/red_velvet.jpeg', NOW()), -- NOW()
@@ -110,11 +80,6 @@ INSERT INTO `product` (`item_id`, `item_category`, `item_name`, `item_price`, `i
 (46, 'other', 'Cinnamon Rolls', 199.00, './assets/Inventory/Other%20&%20Specials/cinnamon_rolls.jpeg', NOW()),
 (47, 'other', 'Chef Special Brownies ¯\_(ツ)_/¯', 999.00, './assets/Inventory/Other%20&%20Specials/chefspecial.jpeg', NOW());
 
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
@@ -123,19 +88,11 @@ CREATE TABLE `user` (
   `register_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user`
---
 
 INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `register_date`) VALUES
 (1, 'Noel', 'Surin', NOW()),
 (2, 'Neha', 'Singh', NOW());
 
--- --------------------------------------------------------
-
---
--- Table structure for table `wishlist`
---
 
 CREATE TABLE `wishlist` (
   `cart_id` int(11) NOT NULL,
@@ -143,50 +100,26 @@ CREATE TABLE `wishlist` (
   `item_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `cart`
---
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_id`);
 
---
--- Indexes for table `product`
---
+
 ALTER TABLE `product`
   ADD PRIMARY KEY (`item_id`);
---
--- Indexes for table `user`
---
+
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
--- AUTO_INCREMENT for table `cart`
---
 ALTER TABLE `cart`
   MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `product`
---
+
 ALTER TABLE `product`
   MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
---
--- AUTO_INCREMENT for table `user`
---
+
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
