@@ -61,7 +61,7 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`item_id`, `category`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
+INSERT INTO `product` (`item_id`, `item_category`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
 (1, 'cake', 'Red Velvet', 449.00, './assets/Inventory/Cakes/red_velvet.jpeg', NOW()), -- NOW()
 (2, 'cake', 'Carrot Cake', 299.00, './assets/Inventory/Cakes/', NOW()),
 (3, 'cake', 'Yellow Butter Cake', 349.00, './assets/products/3.png', NOW()),
