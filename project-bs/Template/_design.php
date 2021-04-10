@@ -1,1 +1,1 @@
-<img src="./assets/pattern-bg.png" class="w-100 h-auto ">
+<img src="./assets/pattern-bg.png" class="w-100 h-auto mt-5">

@@ -11,11 +11,11 @@
     /*include introduction area*/
     include("Template/_introduction.php");
     /*include introduction area*/
-
-    /*include shop now area*/
-    include("Template/_shop-now.php");
-    /*include shop now area*/
-
+?>
+<form class="mt-5 mb-5 py-4 px-4 text-center font-size-40 font-rale bg-white" action="#">
+    <button type="submit" class="bg-light"><a href="./shop-now.php" class="text-decoration-none text-dark">SHOP NOW</a></button>
+</form>
+<?php
     /*include category area*/
     include("Template/_category.php");
     /*include category area*/
