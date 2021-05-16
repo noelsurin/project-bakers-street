@@ -1,19 +1,44 @@
+<?php
+    $item_id = $_GET['item_id']??1;
+    foreach($product->getData() as $item):
+        if($item['item_id'] == $item_id):
+
+            //request method post
+            if($_SERVER['REQUEST_METHOD'] == "POST"){
+                if(isset($_POST['product_submit'])){
+                    //call method addToCart
+                    $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+                }
+            }
+?>
+
 <section id="product" class="py-3">
     <div class="container">
         <div class="row py-5">
             <div class="col-sm-6 text-end" >
-                <img src="./assets/Inventory/Breads/baguette%202.jpeg" alt="product" class="img-fluid w-50" >
+                <img src="<?php echo $item['item_image']??"./assets/Inventory/Breads/baguette.jpeg" ?>" alt="product" class="img-fluid w-50" >
                 <div class="form-row pt-4 font-size-16 font-quick">
                     <div class="col">
                         <button type="submit" class="btn btn-danger form-control w-50 my-1">BUY NOW</button>
                     </div>
                     <div class="col">
-                        <button type="submit" class="btn btn-warning form-control w-50 my-1">ADD TO CART</button>
+                        <form method="post">
+                            <input type="hidden" name="item_id" value="<?php echo $item['item_id']?? '1';?>">
+                            <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                            <?php
+                            if(in_array($item['item_id'], $Cart->getCartId($product->getData('cart'))?? [])){
+                                echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control w-50 my-1">Already in Cart</button>';
+                            }
+                            else{
+                                echo '<button type="submit" name="browse_submit" class="btn btn-warning font-size-16 form-control w-50 my-1">Add to Cart</button>';
+                            }
+                            ?>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
-                <h5 class="font-quick font-size-75 d-flex">BAGUETTE</h5>
+                <h5 class="font-quick font-size-75 d-flex"><?php echo $item['item_name']??"Unknown"?></h5>
                 <div class="d-flex">
                     <div class="rating text-warning font-size-14">
                         <span><i class="fas fa-star"></i></span>
@@ -28,11 +53,11 @@
                 <!-- product price-->
                 <table class="my-3">
                     <tr class="font-size-14 font-quick">
-                        <td class="px-0">M.R.P <strike>Rs. 250</strike></td>
+                        <td class="px-0">M.R.P <strike>Rs. <?php echo $item['item_price'] * 1.3; ?></strike></td>
                     </tr>
                     <tr class="font-size-20 font-quick">
                         <td><strong>Discounted Price</strong></td>
-                        <td><span class="text-danger font-size-30">&nbsp;Rs. 185</span><small class="text-dark font-size-14">&nbsp;&nbsp;inclusive of all taxes</small></td>
+                        <td><span class="text-danger font-size-30">&nbsp;Rs. <?php echo $item['item_price']?? 0?></span><small class="text-dark font-size-14">&nbsp;&nbsp;inclusive of all taxes</small></td>
                     </tr>
                 </table>
                 <!-- !product price-->
@@ -125,3 +150,8 @@
         </div>
     </div>
 </section>
+
+<?php
+endif;
+endforeach;
+?>
