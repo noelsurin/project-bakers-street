@@ -33,9 +33,9 @@ require('functions.php');
         <div class="font-rale font-size-20 px-2 py-3">
             <a href="#" class="px-2 py-2 border-right border-left text-dark text-decoration-none">Login</a>
 
-            <a href="#" class="py-2 rounded-pill color-pink-bg text-decoration-none">
+            <a href="./cart.php" class="py-2 rounded-pill color-pink-bg text-decoration-none">
                 <span class="font-size-20 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-                <span class="px-3 py=2 rounded-pill text-dark bg-light">0</span>
+                <span class="px-3 py=2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart'));?></span>
             </a>
         </div>
     </div>
@@ -49,7 +49,7 @@ require('functions.php');
     </form> -->
 
     <div class="color-primary-bg text-center ">
-        <img class="d-flex mx-auto d-block img-fluid m-50 w-25" src="./assets/bs_logo3.png">
+        <a href="index.php"><img class="d-flex mx-auto d-block img-fluid m-50 w-25" src="./assets/bs_logo3.png"></a>
     </div>
 </header>
 <!--End Header-->
