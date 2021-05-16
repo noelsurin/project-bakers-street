@@ -14,7 +14,7 @@
             <img class ="d-flex mx-auto img-fluid d-block w-75" src="./assets/Banner/banner4/4502438.jpg" alt="Banner4">
         </div>
         <div class="item">
-            <img class ="d-flex mx-auto img-fluid d-block w-75" src="./assets/Banner/banner5/4522259.jpg" alt="Banner5">
+            <img class ="d-flex mx-auto img-fluid d-block w-75" src="./assets/Banner/banner5/4522288.jpg" alt="Banner5">
         </div>
     </div>
 </section>
